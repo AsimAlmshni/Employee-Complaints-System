@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+complaints_manager,complaints.complaints.complaint,model_complaints_complaint,group_manager,1,1,1,1
+hr_employee_manager,complaints.hr.employee,model_hr_employee,group_manager,1,1,1,1
+complaints_manager_all,complaints.complaint,model_complaints_complaint,,1,1,1,1
+complaints_type,complaints.type,model_complaints_type,,1,1,1,1
+hr_employee_manager_all,hr.employee,model_hr_employee,,1,1,1,1

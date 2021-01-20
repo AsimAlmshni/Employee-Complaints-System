@@ -1,0 +1,48 @@
+<odoo>
+
+    <report
+        id="report_complaints"
+        model="complaints.complaint"
+        string="complaint Report"
+        name="complaints.report_complaint_view"
+        file="complaints.report_complaint"
+        report_type="qweb-pdf" />
+
+    <template id="report_complaint_view">
+      <xpath expr="//head" position="inside">
+             <link rel='stylesheet' href="/complaints/static/src/css/report.css"/>
+      </xpath>
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2 t-field="doc.complaint_id"/>
+                        <p>From <span t-field="doc.date"/> to <span t-field="doc.resolved_date"/></p>
+                        <h3>Complaint:</h3>
+                        <table>
+                            <tr>
+                                <th>Compaliant Type</th>
+                                <th>Status</th>
+                                <th>Issue</th>
+                                <th>Does it has effect on work</th>
+                                <th>Does it has financial effect</th>
+                                <th>Acction taken by Company</th>
+                                <th>Employee Id</th>
+                            </tr>
+                            <tr>
+                                <td><span t-field="doc.complaint_id"/></td>
+                                <td><span t-field="doc.status"/></td>
+                                <td><span t-field="doc.issue"/></td>
+                                <td><span t-field="doc.has_effect_on_work"/></td>
+                                <td><span t-field="doc.has_financial_effect"/></td>
+                                <td><span t-field="doc.action_taken_from_company"/></td>
+                                <td><span t-field="doc.employee_id"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

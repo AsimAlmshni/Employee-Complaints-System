@@ -1,0 +1,326 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* complaints
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-28 13:51+0000\n"
+"PO-Revision-Date: 2020-12-28 13:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.view_complaints_complaint_kanban
+msgid ""
+"<br/>\n"
+"                                    complaint code:"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.view_complaints_complaint_kanban
+msgid ""
+"<br/>\n"
+"                                    complaint date:"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.view_complaints_complaint_kanban
+msgid "<i class=\"fa fa-bars fa-lg\" title=\"Manage\" aria-label=\"Manage\"/>"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Acction taken by Company"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__action_taken_from_company
+msgid "Action Taken From Company"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__color
+msgid "Color"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Compaliant Subject"
+msgstr ""
+
+#. module: complaints
+#: model:ir.actions.act_window,name:complaints.complaints_list_action
+#: model:ir.ui.menu,name:complaints.complaint_menu
+msgid "Complaint"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__code
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Complaint Code"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_form_view
+msgid "Complaint Form"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__name
+msgid "Complaint Title"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Complaint:"
+msgstr ""
+
+#. module: complaints
+#: model:ir.actions.act_window,name:complaints.act_complaint_list
+#: model:ir.ui.menu,name:complaints.complaints_menu
+#: model_terms:ir.ui.view,arch_db:complaints.dashboard_form_view
+msgid "Complaints"
+msgstr ""
+
+#. module: complaints
+#: model:res.groups,name:complaints.group_manager
+msgid "Complaints / Manager"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.complaints_complaint_calendar_view
+msgid "Complaints Calendar"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_tree_view
+msgid "Complaints Tree"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.dashboard_form_view
+msgid "Complaints by employee"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.complaints_complaint_graph_view
+msgid "Complaints by status"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__date
+msgid "ComplementDate"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: complaints
+#: model:ir.actions.act_window,name:complaints.open_board_complaint
+#: model:ir.ui.menu,name:complaints.menu_dashboard
+#: model_terms:ir.ui.view,arch_db:complaints.dashboard_form_view
+msgid "Dashboard"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.view_complaints_complaint_kanban
+msgid "Delete"
+msgstr ""
+
+#. module: complaints
+#: model:ir.actions.act_window,name:complaints.department_list_action
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__department_id
+#: model:ir.ui.menu,name:complaints.department_menu
+msgid "Department"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__has_financial_effect
+msgid "Does it has Financial Effect"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Does it has effect on work"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Does it has financial effect"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__has_effect_on_work
+msgid "Does it have effect on Work"
+msgstr ""
+
+#. module: complaints
+#: model:ir.actions.act_window,name:complaints.employees_list_action
+#: model:ir.model,name:complaints.model_hr_employee
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__employee_id
+#: model:ir.ui.menu,name:complaints.employee_menu
+msgid "Employee"
+msgstr ""
+
+#. module: complaints
+#: model:ir.ui.menu,name:complaints.main_complaint_menu
+msgid "Employee Complaints"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.department_form_view
+msgid "Employee Form"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Employee Id"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.employee_tree_view
+msgid "Employee Tree"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model,name:complaints.model_complaints_complaint
+msgid "Employee complaint"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "From"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__id
+msgid "ID"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields.selection,name:complaints.selection__complaints_complaint__status__in_progress
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_form_view
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_search_view
+msgid "In Progress"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.actions.act_window,help:complaints.department_list_action
+msgid "Insert a Department"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.actions.act_window,help:complaints.employees_list_action
+msgid "Insert an Employee"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__issue
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Issue"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields.selection,name:complaints.selection__complaints_complaint__status__pending
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_form_view
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_search_view
+msgid "Pending"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields.selection,name:complaints.selection__complaints_complaint__status__resolved
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_form_view
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_search_view
+msgid "Resolved"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__resolved_date
+msgid "Resolved Date"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.actions.act_window,help:complaints.complaints_list_action
+msgid "Send the first Complaint"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__status
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_search_view
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Status"
+msgstr ""
+
+#. module: complaints
+#: model:ir.actions.report,name:complaints.report_complaints
+msgid "complaint Report"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.view_complaints_complaint_kanban
+msgid "complaint name:"
+msgstr ""
+
+#. module: complaints
+#: model:ir.actions.act_window,name:complaints.act_complaint_calendar
+#: model:ir.actions.act_window,name:complaints.act_complaint_graph
+msgid "complaints"
+msgstr ""
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__complaints_count
+msgid "complaints count"
+msgstr ""
+
+#. module: complaints
+#: model:ir.ui.menu,name:complaints.employee_dep
+msgid "insert department"
+msgstr ""
+
+#. module: complaints
+#: model:ir.ui.menu,name:complaints.employee
+msgid "insert employee"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "to"
+msgstr ""

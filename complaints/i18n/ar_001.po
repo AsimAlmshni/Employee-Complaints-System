@@ -1,0 +1,326 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* complaints
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-28 13:52+0000\n"
+"PO-Revision-Date: 2020-12-28 13:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.view_complaints_complaint_kanban
+msgid ""
+"<br/>\n"
+"                                    complaint code:"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.view_complaints_complaint_kanban
+msgid ""
+"<br/>\n"
+"                                    complaint date:"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.view_complaints_complaint_kanban
+msgid "<i class=\"fa fa-bars fa-lg\" title=\"Manage\" aria-label=\"Manage\"/>"
+msgstr ""
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Acction taken by Company"
+msgstr "الاجراء المتخذ  من الشركة"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__action_taken_from_company
+msgid "Action Taken From Company"
+msgstr "الاجراء المتخذ  من الشركة"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__color
+msgid "Color"
+msgstr "اللون"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Compaliant Subject"
+msgstr "موضوع الشكوى"
+
+#. module: complaints
+#: model:ir.actions.act_window,name:complaints.complaints_list_action
+#: model:ir.ui.menu,name:complaints.complaint_menu
+msgid "Complaint"
+msgstr "الشكوى"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__code
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Complaint Code"
+msgstr "رقم الشكوى"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_form_view
+msgid "Complaint Form"
+msgstr "الشكوى من"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__name
+msgid "Complaint Title"
+msgstr "عنوان الشكوى"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Complaint:"
+msgstr "الشكوى"
+
+#. module: complaints
+#: model:ir.actions.act_window,name:complaints.act_complaint_list
+#: model:ir.ui.menu,name:complaints.complaints_menu
+#: model_terms:ir.ui.view,arch_db:complaints.dashboard_form_view
+msgid "Complaints"
+msgstr "الشكاوي"
+
+#. module: complaints
+#: model:res.groups,name:complaints.group_manager
+msgid "Complaints / Manager"
+msgstr "الشكاوي / المسؤول"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.complaints_complaint_calendar_view
+msgid "Complaints Calendar"
+msgstr "كالندر الشكاوي"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_tree_view
+msgid "Complaints Tree"
+msgstr "الشكاوي"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.dashboard_form_view
+msgid "Complaints by employee"
+msgstr "الشكاوي من الوظفين"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.complaints_complaint_graph_view
+msgid "Complaints by status"
+msgstr "الشكاوي بالحالة"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__date
+msgid "ComplementDate"
+msgstr "تاريخ الشكوى"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: complaints
+#: model:ir.actions.act_window,name:complaints.open_board_complaint
+#: model:ir.ui.menu,name:complaints.menu_dashboard
+#: model_terms:ir.ui.view,arch_db:complaints.dashboard_form_view
+msgid "Dashboard"
+msgstr "لوحة المعلومات"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.view_complaints_complaint_kanban
+msgid "Delete"
+msgstr "حذف"
+
+#. module: complaints
+#: model:ir.actions.act_window,name:complaints.department_list_action
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__department_id
+#: model:ir.ui.menu,name:complaints.department_menu
+msgid "Department"
+msgstr "القسم"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__has_financial_effect
+msgid "Does it has Financial Effect"
+msgstr "هل يوجد تاثير مادي"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Does it has effect on work"
+msgstr "هل يوجد تاثير على العمل"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Does it has financial effect"
+msgstr "هل يوجد تاثير مادي"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__has_effect_on_work
+msgid "Does it have effect on Work"
+msgstr "هل يوجد تاثير على العمل"
+
+#. module: complaints
+#: model:ir.actions.act_window,name:complaints.employees_list_action
+#: model:ir.model,name:complaints.model_hr_employee
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__employee_id
+#: model:ir.ui.menu,name:complaints.employee_menu
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: complaints
+#: model:ir.ui.menu,name:complaints.main_complaint_menu
+msgid "Employee Complaints"
+msgstr "شكاوي الموظفين"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.department_form_view
+msgid "Employee Form"
+msgstr "من الموظف"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Employee Id"
+msgstr "معرف الموظف"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.employee_tree_view
+msgid "Employee Tree"
+msgstr "الموظف"
+
+#. module: complaints
+#: model:ir.model,name:complaints.model_complaints_complaint
+msgid "Employee complaint"
+msgstr "شكوى الموظف"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "From"
+msgstr "من"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_search_view
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: complaints
+#: model:ir.model.fields.selection,name:complaints.selection__complaints_complaint__status__in_progress
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_form_view
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_search_view
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+#. module: complaints
+#: model_terms:ir.actions.act_window,help:complaints.department_list_action
+msgid "Insert a Department"
+msgstr "ادخل الفرع"
+
+#. module: complaints
+#: model_terms:ir.actions.act_window,help:complaints.employees_list_action
+msgid "Insert an Employee"
+msgstr "ادخل موظف"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__issue
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Issue"
+msgstr "المشكلة"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: complaints
+#: model:ir.model.fields.selection,name:complaints.selection__complaints_complaint__status__pending
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_form_view
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_search_view
+msgid "Pending"
+msgstr "معلق"
+
+#. module: complaints
+#: model:ir.model.fields.selection,name:complaints.selection__complaints_complaint__status__resolved
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_form_view
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_search_view
+msgid "Resolved"
+msgstr "تم الحل"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__resolved_date
+msgid "Resolved Date"
+msgstr "تاريخ الحل"
+
+#. module: complaints
+#: model_terms:ir.actions.act_window,help:complaints.complaints_list_action
+msgid "Send the first Complaint"
+msgstr "ارسل الشكوى الاولى"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__status
+#: model_terms:ir.ui.view,arch_db:complaints.complaint_search_view
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "Status"
+msgstr "الحالة"
+
+#. module: complaints
+#: model:ir.actions.report,name:complaints.report_complaints
+msgid "complaint Report"
+msgstr "تقرير الشكوى"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.view_complaints_complaint_kanban
+msgid "complaint name:"
+msgstr "عنوان الشكوى"
+
+#. module: complaints
+#: model:ir.actions.act_window,name:complaints.act_complaint_calendar
+#: model:ir.actions.act_window,name:complaints.act_complaint_graph
+msgid "complaints"
+msgstr "الشكاوي"
+
+#. module: complaints
+#: model:ir.model.fields,field_description:complaints.field_complaints_complaint__complaints_count
+msgid "complaints count"
+msgstr "عدد الشكاوي"
+
+#. module: complaints
+#: model:ir.ui.menu,name:complaints.employee_dep
+msgid "insert department"
+msgstr "ادخل الفرع"
+
+#. module: complaints
+#: model:ir.ui.menu,name:complaints.employee
+msgid "insert employee"
+msgstr "ادخل الموظف"
+
+#. module: complaints
+#: model_terms:ir.ui.view,arch_db:complaints.report_complaint_view
+msgid "to"
+msgstr "إلى"

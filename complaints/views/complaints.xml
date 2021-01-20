@@ -1,0 +1,280 @@
+<odoo>
+
+        <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+
+
+        <record model="ir.ui.view" id="complaint_tree_view">
+            <field name="name">complaint.tree</field>
+            <field name="model">complaints.complaint</field>
+            <field name="arch" type="xml">
+                <tree string="Complaints Tree">
+                    <field name="issue"/>
+                    <field name="complaint_id"/>
+                    <field name="employee_id"/>
+                    <field name="department_id"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+     <!--dashboard view -->
+    <record id="complaints_report_view_dashboard" model="ir.ui.view">
+            <field name="name">complaints.comlaint.view.dashboard</field>
+            <field name="model">complaints.complaint</field>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <!--<header>-->
+                   <!--<button name="complaint_create" type="object"  class = "btn btn-primary btn-sm" string="Create" style="margin-left: 2%;margin-bottom: .8%;" />-->
+                <!--</header>-->
+                <dashboard>
+                    <view type="graph" ref="complaints.complaints_complaint_graph_view"/>
+                    <view type="calendar" ref="complaints.complaints_complaint_calendar_view"/>
+                </dashboard>
+            </field>
+        </record>
+
+
+        <record id="complaints.complaints_list_action" model="ir.actions.act_window">
+            <field name="view_mode">dashboard</field>
+            <field name ="view_id" ref="complaints_report_view_dashboard"/>
+        </record>
+
+        <record id="sale_report_action_dashboard_dashboard" model="ir.actions.act_window.view">
+        	<field name="sequence" eval="1"/>
+        	<field name="view_mode">dashboard</field>
+        	<field name="view_id" ref="complaints_report_view_dashboard"/>
+        	<!--<field name="act_window_id" ref="sale_report_action_dashboard"/>-->
+        </record>
+
+        <record model="ir.ui.view" id="complaint_form_view">
+            <field name="name">complaint.form</field>
+            <field name="model">complaints.complaint</field>
+            <field name="arch" type="xml" >
+                <form string="Complaint Form" >
+
+                    <sheet>
+                       <header>
+
+                           <button name="in_progress_action" string="In Progress" type="object" class="oe_highlight"
+                                   attrs="{'invisible':[('status','!=', 'pending')]}" />
+                           <button name="resolve_action" string="Resolved" type="object" class="oe_highlight"  groups="hr.group_hr_manager"
+                                   context="{'turn_view_readonly':True}" attrs="{'invisible':[('status','!=', 'in_progress')]}" />
+
+                           <field name="status" widget="statusbar" />
+                       </header>
+                        <group>
+                            <field name="complaint_id" attrs="{'readonly':[('status','=', 'resolved')]}"/>
+                            <field name="issue" attrs="{'readonly':[('status','=', 'resolved')]}"/>
+                            <field name="action_taken_from_company" attrs="{'readonly':[('status','=', 'resolved')]}"/>
+                            <field name="date" attrs="{'readonly':[('status','=', 'resolved')]}"/>
+                            <field name="resolved_date" attrs="{'readonly':True}"/>
+                            <field name="has_effect_on_work" attrs="{'readonly':[('status','=', 'resolved')]}"/>
+                            <field name="has_financial_effect" attrs="{'readonly':[('status','=', 'resolved')]}"/>
+                            <field name="department_id" attrs="{'readonly':[('status','=', 'resolved')]}"/>
+                            <field name="employee_id" attrs="{'readonly':[('status','=', 'resolved')]}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    <!--attrs="{'readonly':[('status','=', 'resolved')]}"-->
+
+    <record model="ir.ui.view" id="complaint_type_form_view">
+            <field name="name">complaint_type.form</field>
+            <field name="model">complaints.type</field>
+            <field name="arch" type="xml" >
+                <form string="Complaint Form" >
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="code" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    <record model="ir.ui.view" id="complaint_search_view">
+            <field name="name">complaint.search</field>
+            <field name="model">complaints.complaint</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="status" invisible="1"/>
+                    <field name="complaint_id"/>
+                    <filter name="in_progress" string="In Progress"
+                            domain="[('status', '=', 'in_progress')]"/>
+                    <group string="Group By">
+                        <filter name="by_employee_id" string="Employees"
+                                context="{'group_by': 'employee_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+
+
+
+
+
+
+
+    <!--Kanban View-->
+            <record model="ir.ui.view" id="view_complaints_complaint_kanban">
+            <field name="name">complaints.complaint.kanban</field>
+            <field name="model">complaints.complaint</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="status">
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div
+                                    t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                                                  oe_kanban_global_click_edit oe_semantic_html_override
+                                                  oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+                                <div class="oe_dropdown_kanban">
+                                    <!-- dropdown menu -->
+                                    <div class="oe_dropdown_toggle">
+                                        <i class="fa fa-bars fa-lg" title="Manage" aria-label="Manage"/>
+                                        <ul class="oe_dropdown_menu">
+                                            <li>
+                                                <a type="delete">Delete</a>
+                                            </li>
+                                            <li>
+                                                <ul class="oe_kanban_colorpicker"
+                                                    data-field="color"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="oe_clear"></div>
+                                </div>
+                                <div t-attf-class="oe_kanban_content">
+                                    complaint Type:
+                                    <field name="complaint_id"/>
+                                    <br/>
+                                    Department:
+                                    <field name="department_id"/>
+                                    <br/>
+                                    Employee:
+                                    <field name="employee_id"/>
+                                    <br/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+    <!--calender view-->
+        <record model="ir.ui.view" id="complaints_complaint_calendar_view">
+            <field name="name">complaints.complaint</field>
+            <field name="model">complaints.complaint</field>
+            <field name="arch" type="xml">
+                <calendar string="Complaints Calendar" date_start="date" date_stop="resolved_date" color="status">
+                    <field name="complaint_id"/>
+                </calendar>
+            </field>
+        </record>
+
+<!--dashboard view or graph view-->
+        <record model="ir.ui.view" id="complaints_complaint_graph_view">
+            <field name="name">complaints.complaint.graph</field>
+            <field name="model">complaints.complaint</field>
+            <field name="arch" type="xml">
+                <graph string="Complaints by status">
+                    <field name="status"/>
+                </graph>
+            </field>
+        </record>
+
+    <!--RTESOLVE BUTTON-->
+
+
+        <record model="ir.actions.act_window" id="complaints_list_action">
+            <field name="name">Complaint</field>
+            <field name="res_model">complaints.complaint</field>
+            <field name="context" eval="{'search_default_employee_id': 1}"/>
+            <field name="view_mode">tree,form,kanban,calendar,graph,dashboard</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">Send the first Complaint
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="complaints_list_action_tree">
+            <field name="name">Complaint</field>
+            <field name="res_model">complaints.complaint</field>
+            <field name="context" eval="{'search_default_in_progress': 1}"/>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">Send the first Complaint
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="employees_list_action">
+            <field name="name">Employee</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Insert an Employee
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="department_list_action">
+            <field name="name">Department</field>
+            <field name="res_model">hr.department</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Insert a Department
+                </p>
+            </field>
+        </record>
+
+    <record model="ir.actions.server" id="resolve_complaints">
+        <field name="name">Set Resolved</field>
+        <field name="model_id" ref="complaints.model_complaints_complaint"/>
+        <field name="binding_model_id" ref="complaints.model_complaints_complaint"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.set_resolved_status()
+        </field>
+    </record>
+
+
+
+    <!--Complaint-->
+        <menuitem id="main_complaint_menu" name="Employee Complaints"/>
+
+        <menuitem id="complaint_menu" name="Complaint"
+                  parent="main_complaint_menu"/>
+
+    <!--Employee-->
+        <menuitem id="employee_menu" name="Employee"
+                  parent="main_complaint_menu"/>
+        <menuitem id="employee" name="insert employee" parent="employee_menu"
+                  action="employees_list_action"/>
+
+    <!--Department-->
+        <menuitem id="department_menu" name="Department"
+                  parent="main_complaint_menu"/>
+        <menuitem id="employee_dep" name="insert department" parent="department_menu"
+                  action="department_list_action"/>
+
+        <menuitem id="complaints_menu" name="Report" parent="complaint_menu"
+                  action="complaints_list_action"/>
+
+        <menuitem id="complaints_menu_tree" name="Complaints" parent="complaint_menu"
+                  action="complaints_list_action_tree"/>
+
+</odoo>

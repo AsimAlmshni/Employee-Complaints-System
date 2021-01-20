@@ -1,0 +1,27 @@
+<odoo>
+
+        <record model="ir.ui.view" id="employee_tree_view">
+            <field name="name">employee.tree</field>
+            <field name="model">hr.employee</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Tree">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id = "employee_view_form_inherit" model = "ir.ui.view" >
+            <field name = "name">hr.employee.inherit</field>
+            <field name = "model">hr.employee</field>
+            <field name = "inherit_id" ref = "hr.view_employee_form"/>
+            <field name = "arch" type = "xml" >
+                <xpath expr = "//field[@name='image_1920']" position = "before" >
+                    <div class="oe_button_box" name="button_box">
+                      <button name="complaint_tree" type="object" class="oe_stat_button" icon="fa-calendar" >
+                            <field name="complaints_count"  string="Complaints" widget="statinfo"/>
+                      </button>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+        </odoo>
